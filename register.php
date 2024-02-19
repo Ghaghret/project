@@ -22,8 +22,8 @@
     <div class="top-navbar">
         <p>WELCOME TO OUR SHOP</p>
         <div class="icons">
-            <a href="login.html"><img src="./images/register.png" alt="" width="18px">Login</a>
-            <a href="register.html"><img src="./images/register.png" alt="" width="18px">Register</a>
+            <a href="login.php"><img src="./images/register.png" alt="" width="18px">Login</a>
+            <a href="register.php"><img src="./images/register.png" alt="" width="18px">Register</a>
         </div>
     </div>
     <!-- top navbar -->
@@ -46,7 +46,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Category
-                </a>
+                
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
                   <li><a class="dropdown-item" href="#">Samrt Phone</a></li>
                   <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
@@ -59,6 +59,7 @@
                   <li><a class="dropdown-item" href="#">PC Moniter</a></li>
                 </ul>
               </li>
+</a>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
               </li>
@@ -85,21 +86,24 @@
    <div class="container" id="login">
     <div class="row">
         <div class="col-md-5 py-3 py-md-0" id="side1">
-            <h3 class="text-center">Welcome Back!</h3>
+            <h3 class="text-center">Register</h3>
         </div>
         <div class="col-md-7 py-3 py-md-0" id="side2">
-            <h3 class="text-center">Account login</h3>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, sequi.</p>
+            <h3 class="text-center">Create Account</h3>
             <div class="input2 text-center">
-            <input type="name" placeholder="User Name">
-            <input type="password" placeholder="Password">
+              <form action="" method="POST">
+            <input type="name" placeholder="Name" name="name">
+            <input type="name" placeholder="User Name" name="u_name">
+            <input type="number" placeholder="Phone" name="number">
+            <input type="email" placeholder="Email" name="email">
+            <input type="password" placeholder="Password" name="pass">
             </div>
-            <p class="text-center" id="btnlogin"><a href="#">LOG IN</a></p>
+            <input type="submit" name="submit" value="register now" id="btn">
+            </form>
         </div>
 
     </div>
    </div>
-
     <!-- footer -->
     <footer id="footer">
       <div class="footer-top">
@@ -110,8 +114,8 @@
               <h3>Electronic Shop</h3>
               <p>
                 mehsana <br>
-                ghaghret <br>
-                gujrat<br>
+                ghaghret<br>
+                gujrat <br>
               </p>
               <strong>Phone:</strong> +91 9924261332<br>
               <strong>Email:</strong> tejpatel198@gmail.com <br>
@@ -164,10 +168,10 @@
       <hr>
       <div class="container py-4">
         <div class="copyright">
-          &copy; Copyright <strong><span>Electronic Shop</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>tej patel</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="#">SA coding</a>
+          Designed by <a href="#">tej patel</a>
         </div>
       </div>
     </footer>

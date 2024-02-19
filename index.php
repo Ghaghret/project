@@ -22,8 +22,8 @@
     <div class="top-navbar">
         <p>WELCOME TO OUR SHOP</p>
         <div class="icons">
-            <a href="login.html"><img src="./images/register.png" alt="" width="18px">Login</a>
-            <a href="register.html"><img src="./images/register.png" alt="" width="18px">Register</a>
+            <a href="login.php"><img src="./images/register.png" alt="" width="18px">Login</a>
+            <a href="register.php"><img src="./images/register.png" alt="" width="18px">Register</a>
         </div>
     </div>
 
@@ -37,27 +37,11 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Product</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Category
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
-                      <li><a class="dropdown-item" href="#">Samrt Phone</a></li>
-                      <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
-                      <li><a class="dropdown-item" href="#">Cameras</a></li>
-                      <li><a class="dropdown-item" href="#">Fridge</a></li>
-                      <li><a class="dropdown-item" href="#">AC</a></li>
-                      <li><a class="dropdown-item" href="#">Samrt Watch</a></li>
-                      <li><a class="dropdown-item" href="#">Headphone</a></li>
-                      <li><a class="dropdown-item" href="#">Laptop</a></li>
-                      <li><a class="dropdown-item" href="#">PC Moniter</a></li>
-                    </ul>
-                  </li>
+                  </li> 
                   <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
                   </li>
@@ -79,8 +63,6 @@
                 <br>
                 Up To <span id="span2">50%</span> Off
               </h1>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, saepe.
-                <br>Lorem ipsum dolor sit amet consectetur.
               </p>
               <div class="btn"><button>Shop Now</button></div>
         
@@ -106,7 +88,7 @@
               <i class="fa-solid fa-star checked"></i>
               <i class="fa-solid fa-star checked"></i>
             </div>
-            <h2>$1000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2>
+             <h2>$1000 <span><li class="fa-solid fa-cart-shopping"></li></span></h2> 
           </div>
         </div>
       </div>

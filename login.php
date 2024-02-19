@@ -22,8 +22,8 @@
     <div class="top-navbar">
         <p>WELCOME TO OUR SHOP</p>
         <div class="icons">
-            <a href="login.html"><img src="./images/register.png" alt="" width="18px">Login</a>
-            <a href="register.html"><img src="./images/register.png" alt="" width="18px">Register</a>
+            <a href="login.php"><img src="./images/register.png" alt="" width="18px">Login</a>
+            <a href="register.php"><img src="./images/register.png" alt="" width="18px">Register</a>
         </div>
     </div>
     <!-- top navbar -->
@@ -31,33 +31,17 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg" id="navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html" id="logo"><span id="span1">E</span>Lectronic <span>Shop</span></a>
+          <a class="navbar-brand" href="index.php" id="logo"><span id="span1">E</span>Lectronic <span>Shop</span></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span><img src="./images/menu.png" alt="" width="30px"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Product</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Category
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
-                  <li><a class="dropdown-item" href="#">Samrt Phone</a></li>
-                  <li><a class="dropdown-item" href="#">Mobile Phone</a></li>
-                  <li><a class="dropdown-item" href="#">Cameras</a></li>
-                  <li><a class="dropdown-item" href="#">Fridge</a></li>
-                  <li><a class="dropdown-item" href="#">AC</a></li>
-                  <li><a class="dropdown-item" href="#">Samrt Watch</a></li>
-                  <li><a class="dropdown-item" href="#">Headphone</a></li>
-                  <li><a class="dropdown-item" href="#">Laptop</a></li>
-                  <li><a class="dropdown-item" href="#">PC Moniter</a></li>
-                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -85,22 +69,20 @@
    <div class="container" id="login">
     <div class="row">
         <div class="col-md-5 py-3 py-md-0" id="side1">
-            <h3 class="text-center">Register</h3>
+            <h3 class="text-center">Welcome Back!</h3>
         </div>
         <div class="col-md-7 py-3 py-md-0" id="side2">
-            <h3 class="text-center">Create Account</h3>
+            <h3 class="text-center">Account login</h3>
             <div class="input2 text-center">
-            <input type="name" placeholder="Name">
             <input type="name" placeholder="User Name">
-            <input type="number" placeholder="Phone">
-            <input type="email" placeholder="Email">
             <input type="password" placeholder="Password">
             </div>
-            <p class="text-center" id="btnlogin"><a href="#">SIGN UP</a></p>
+            <input type="submit" name="submit" value="register now" id="btn">
         </div>
 
     </div>
    </div>
+
     <!-- footer -->
     <footer id="footer">
       <div class="footer-top">
@@ -111,8 +93,8 @@
               <h3>Electronic Shop</h3>
               <p>
                 mehsana <br>
-                ghaghret<br>
-                gujrat <br>
+                ghaghret <br>
+                gujrat<br>
               </p>
               <strong>Phone:</strong> +91 9924261332<br>
               <strong>Email:</strong> tejpatel198@gmail.com <br>
@@ -165,10 +147,10 @@
       <hr>
       <div class="container py-4">
         <div class="copyright">
-          &copy; Copyright <strong><span>tej patel</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Electronic Shop</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="#">tej patel</a>
+          Designed by <a href="#">SA coding</a>
         </div>
       </div>
     </footer>
