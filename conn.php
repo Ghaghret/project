@@ -9,6 +9,6 @@ if(!$conn){
     die("sorry not connected".mysqli_connect_error());
 }
 else{
-    echo "connected ok....:)";
+    
 }
 ?>

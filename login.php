@@ -1,3 +1,7 @@
+<?php
+include("conn.php");
+$error_message="";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,17 +76,43 @@
             <h3 class="text-center">Welcome Back!</h3>
         </div>
         <div class="col-md-7 py-3 py-md-0" id="side2">
+          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <h3 class="text-center">Account login</h3>
             <div class="input2 text-center">
-            <input type="name" placeholder="User Name">
-            <input type="password" placeholder="Password">
+            <input type="name" placeholder="User Name" name="usrname">
+            <input type="password" placeholder="Password" name="pass">
             </div>
-            <input type="submit" name="submit" value="register now" id="btn">
+            <input type="submit" name="sbt" value="Login" id="btn">
+            </form>
+            <?php echo $error_message?>
         </div>
 
     </div>
    </div>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $usrname = $_POST["usrname"];
+  $pass = $_POST["pass"];
+  $login_query = "SELECT user_id, username, password FROM users WHERE username = '$usrname' AND password = '$pass'";
+  $result = $conn->query($login_query);
 
+  if ($result->num_rows == 1) {
+      $row = $result->fetch_assoc();
+      $_SESSION["username"] = $row["username"];
+      $_SESSION["userid"] = $row["user_id"];
+      setcookie("username", $row["username"], time() + 3600, "/");
+      setcookie("userid", $row["userid"], time() + 3600, "/");
+      header("Location: ../PHP/home.php");
+      exit();
+  } 
+  else{
+      $error_message = "Invalid username or password";
+  }
+
+}
+
+$conn->close();
+?>
     <!-- footer -->
     <footer id="footer">
       <div class="footer-top">
@@ -92,11 +122,11 @@
             <div class="col-lg-3 col-md-6 footer-contact">
               <h3>Electronic Shop</h3>
               <p>
-                mehsana <br>
-                ghaghret <br>
+                visnagar <br>
+                mahesana <br>
                 gujrat<br>
               </p>
-              <strong>Phone:</strong> +91 9924261332<br>
+              <strong>Phone:</strong> +91 9876543210<br>
               <strong>Email:</strong> tejpatel198@gmail.com <br>
             </div>
 
@@ -135,7 +165,7 @@
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <!--<a href="#"><i class="fa-brands fa-skype"></i></a> -->
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
               </div>
             

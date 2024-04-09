@@ -38,7 +38,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Product</a>
@@ -91,14 +91,43 @@
         <div class="col-md-7 py-3 py-md-0" id="side2">
             <h3 class="text-center">Create Account</h3>
             <div class="input2 text-center">
-              <form action="" method="POST">
-            <input type="name" placeholder="Name" name="name">
-            <input type="name" placeholder="User Name" name="u_name">
-            <input type="number" placeholder="Phone" name="number">
-            <input type="email" placeholder="Email" name="email">
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+            <input type="name" placeholder="User Name" name="usrname">
             <input type="password" placeholder="Password" name="pass">
+            <input type="password" placeholder="Confirm Password" name="cpass">
             </div>
-            <input type="submit" name="submit" value="register now" id="btn">
+            <input type="submit" name="sbt" value="register now" id="btn">
+            <?php
+            error_reporting(0);
+     $servername = "localhost";
+     $username = "root";
+     $password = "";
+     $dbname = "project-2";
+     $conn = new mysqli($servername, $username, $password, $dbname);
+     if ($conn->connect_error) {
+         die("Connection failed: " . $conn->connect_error);
+     }
+     $sql = "SELECT * FROM users";
+     $login = "INSERT INTO users (username,password) VALUES('" . $_POST["usrname"] . "','" . $_POST["pass"] . "')";
+     $results = $conn->query($sql);
+    if (isset($_POST['sbt'])) {
+        if ($_POST['pass']==$_POST['cpass']) {
+        try {
+            mysqli_query($conn, $login);
+            sleep(2);
+            header("Location: login.php");
+        } catch (mysqli_sql_exception $e) {
+            if ($e->getCode() == 1062) {
+                echo "<br>Error: Username is already taken.";
+            } else {
+                echo "Error inserting record: " . $e->getMessage();
+            }
+        }
+    }else {
+        echo "Password Must Be Same";
+    }
+    }
+    ?>
             </form>
         </div>
 
@@ -156,7 +185,7 @@
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <!--<a href="#"><i class="fa-brands fa-skype"></i></a> -->
                 <a href="#"><i class="fa-brands fa-linkedin"></i></a>
               </div>
             

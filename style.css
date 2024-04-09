@@ -114,6 +114,12 @@
 #span2{
     color: #ffc800;
 }
+.card{
+    margin-top: 15px;
+    min-height: 300px;
+    align-items: center;
+
+}
 .content p{
     margin-left: 23px;
 }
@@ -147,7 +153,7 @@
 }
 #product-cards .card h3{
     font-size: 20px;
-    color: black;
+    color: black
 }
 #product-cards .card p{
     font-size: 12px;
@@ -171,7 +177,19 @@
     color: black;
     cursor: pointer;
 }
-
+.carousel-item img{
+    height: 370px;
+    aspect-ratio: 1 / 1;
+}
+#img{
+    margin-top: 10px;
+    height: 290px;
+    width: 190px;
+}
+#size{
+    height: 10px;
+    width: 20px;
+}
 #other-cards{
     margin-top: 30px;
 }
